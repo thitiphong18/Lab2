@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const message = ref("Hello World!");
+const isRed = ref(true);
+const color = ref("green");
+function togglered() {
+  isRed.value = !isRed.value;
+}
+function toggleColor() {
+  color.value = color.value === "green" ? "blue" : "green";
+}
 </script>
 
 <template>
@@ -10,12 +18,14 @@ const message = ref("Hello World!");
     </span>
   </p>
 
-  <p class="red">
+  <p :class="{ red: isRed }" @click="togglered">
     <span> This should be red... but click me toggle it. </span>
   </p>
 
-  <p style="color: green">
-    <span> This should be red... but click me toggle it. </span>
+  <p :style="{ color }" @click="toggleColor">
+    <span>
+      This should be green, and should toggle between green and blue on click.
+    </span>
   </p>
 </template>
 
