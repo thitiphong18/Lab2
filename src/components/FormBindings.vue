@@ -4,6 +4,7 @@ const text = ref("Edit Me");
 const checked = ref(true);
 const checkedNames = ref(["Jack"]);
 const picked = ref("");
+const selected = ref("2");
 </script>
 
 <template>
@@ -30,6 +31,15 @@ const picked = ref("");
   <input type="radio" id="two" value="Two" v-model="picked" />
   <label for="two">Two</label><br />
   <span>Picked: {{ picked }}</span>
+
+  <h2>Select</h2>
+  <select v-model="selected">
+    <option disabled value="">Please select one</option>
+    <option value="1">A</option>
+    <option value="2">B</option>
+    <option value="3">C</option>
+  </select>
+  <span>Selected {{ selected }}</span>
 </template>
 
 <style scoped></style>
