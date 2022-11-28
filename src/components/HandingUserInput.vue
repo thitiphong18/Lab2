@@ -2,7 +2,7 @@
 import { ref } from "vue";
 const message = ref("Hello World!");
 function reverseMessage() {
-  console.log("call reverse message");
+  message.value = message.value.split("").reverse().join("");
 }
 </script>
 
