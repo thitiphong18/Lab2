@@ -1,9 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const message = ref("Hello World!");
+function reverseMessage() {
+  console.log("call reverse message");
+}
+</script>
 
 <template>
-  <h1>Hello World</h1>
-  <button>Reverse message</button>
-  <button>Append "!"</button>
+  <h1>{{ message }}</h1>
+  <button @click="reverseMessage">Reverse message</button>
+  <button @click="message += '!'">Append "!"</button>
   <a href="">A link with e.preventDefault </a>
 </template>
 
