@@ -9,34 +9,32 @@ const state = reactive({
 const result = computed(function () {
   return parseInt(state.num1) + parseInt(state.num2);
 });
+
 function add() {
   state.result = parseInt(state.num1) + parseInt(state.num2);
 }
 </script>
-
 <template>
   <div class="card">
-    <div>
-      <input
-        v-modul="state.num1"
-        type="text"
-        ref="num1"
-        style="text-align: center; width: 80%"
-      />
-    </div>
-    <div>+</div>
-    <div>
-      <input
-        v-modul="state.num2"
-        type="text"
-        ref="num2"
-        style="text-align: center; width: 80%"
-      />
-    </div>
-    <hr />
-    <button @click="add" style="width: 80%">=</button>
-    <div ref="result">{{ state.num1 }}+{{ state.num2 }} = {{ result }}</div>
+    <input
+      v-model="state.num1"
+      type="text"
+      ref="num1"
+      style="text-align: center; width= 80%"
+    />
   </div>
+  <div>+</div>
+  <div>
+    <input
+      v-model="state.num2"
+      type="text"
+      ref="num2"
+      style="text-align: center; width: 80%"
+    />
+  </div>
+  <hr />
+  <button @click="add" style="width: 80%">=</button>
+  <div ref="result">{{ state.num1 }}+{{ state.num2 }}={{ result }}</div>
 </template>
 
 <style>

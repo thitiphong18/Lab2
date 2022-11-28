@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const message = ref("Hello World!");
+</script>
+
 <template>
   <p>
-    <span title="message">
+    <span :title="message">
       Hover your over me for second to see my dinamically bound titled!
     </span>
   </p>
@@ -15,4 +19,8 @@
   </p>
 </template>
 
-<style scoped></style>
+<style scoped>
+.red {
+  color: red;
+}
+</style>
