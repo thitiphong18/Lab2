@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const show = ref(true);
+const list = ref([1, 2, 3]);
 </script>
 
 <template>
@@ -10,11 +11,10 @@ const show = ref(true);
   <button>Reverse List</button>
 
   <ul v-if="show">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
+    <li v-for="(item, index) of list" :key="index">{{ item }}</li>
   </ul>
-  <p v-else>Hide List</p>
+  <p v-else-if="list.length">List is not empty, but hidden.</p>
+  <p v-else>List is empty.</p>
 </template>
 
 <script scoped></script>
