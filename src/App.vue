@@ -5,10 +5,12 @@ import CalComponent from "./components/CalComponent.vue";
 import HelloWorldExample from "./components/HelloWorldExample.vue";
 import HandingUserInput from "./components/HandingUserInput.vue";
 import AtributeBindings from "./components/AtributeBindings.vue";
+import ConditionalsAndLoops from "./components/ConditionalsAndLoops.vue";
 </script>
 
 <template>
   <div>
+    <ConditionalsAndLoops />
     <AtributeBindings />
     <HandingUserInput />
     <CalComponent />
