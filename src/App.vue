@@ -7,10 +7,13 @@ import HandingUserInput from "./components/HandingUserInput.vue";
 import AtributeBindings from "./components/AtributeBindings.vue";
 import ConditionalsAndLoops from "./components/ConditionalsAndLoops.vue";
 import FormBindings from "./components/FormBindings.vue";
+import SimpleComponent from "./components/SimpleComponent.vue";
 </script>
 
 <template>
   <div>
+    <SimpleComponent />
+    <br /><br />
     <FormBindings />
     <br /><br />
     <ConditionalsAndLoops />
