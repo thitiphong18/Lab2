@@ -11,6 +11,8 @@ import ConditionalsAndLoops from "./components/ConditionalsAndLoops.vue";
 <template>
   <div>
     <ConditionalsAndLoops />
+    <br />
+    <br />
     <AtributeBindings />
     <HandingUserInput />
     <CalComponent />
